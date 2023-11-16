@@ -56,7 +56,7 @@ exports.getUsersDrinks = async (req,res) =>{    // finds only the drinks of a sp
 exports.getDrinksById = async (req,res) =>{   //will get a drink based off its id 
     try {
         const drink = await Drink.findById(req.params.id)
-                                .populate('user', 'fullname -_id')
+                                .populate('user', '_id fullname')   // 
         if (!drink) {
             return res.status(404).send('Drink not found')
         }
