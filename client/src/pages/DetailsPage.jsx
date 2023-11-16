@@ -19,7 +19,7 @@ function DetailsPage() {
                 });
                 setDrink(response.data);
                 const userId = localStorage.getItem('userId'); // Assuming the user's ID is stored in local storage
-                setIsOwner(response.data.user === userId);
+                setIsOwner(response.data.user._id === userId);
             } catch (error) {
                 console.error(error);
                 // Handle error
