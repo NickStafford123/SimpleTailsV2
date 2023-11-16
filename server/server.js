@@ -14,4 +14,5 @@ app.use(cors())
 app.use('/api/user', userRoutes)
 app.use('/api/drinks', drinkRoutes)
 
+
 app.listen(port, () => console.log(`The server is running on port ${port}`))
